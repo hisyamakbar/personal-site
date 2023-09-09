@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 @layer base {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Cabinet Grotesk", sans-serif;
-  }
-  body {
-    font-family: "Satoshi", sans-serif;
-  }
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      font-family: "Cabinet Grotesk", sans-serif;
+   }
+   body {
+      font-family: "Satoshi", sans-serif;
+   }
 
-  input {
-    @apply bg-transparent border-neutral-400 h-[51px] pl-1 border-b focus:outline-none;
-  }
+   input {
+      @apply bg-transparent border-neutral-400 h-[51px] pl-1 border-b focus:outline-none;
+   }
 }
 
 @layer components {
-  .card {
-    @apply bg-white  rounded-3xl p-10 drop-shadow-sm hover:drop-shadow-lg dark:drop-shadow-none transition duration-150 ease-out hover:ease-in hover:scale-[1.03]
+   .card {
+      @apply bg-white  rounded-3xl p-10 drop-shadow-sm hover:drop-shadow-lg dark:drop-shadow-none transition duration-150 ease-out hover:ease-in hover:scale-[1.03]
 
       /* dark mode */
       dark:backdrop-blur-2xl
@@ -30,14 +30,14 @@
       dark:bg-gradient-to-tl from-transparent to-white/30 from-[0%] to-[200%]
       dark:border
       dark:border-stone-300;
-  }
+   }
 
-  .link {
-    @apply bg-white py-[6px] px-4 rounded-full text-stone-800 text-sm font-bold hover:bg-neutral-100 cursor-pointer dark:text-neutral-300 dark:hover:text-white dark:bg-transparent dark:hover:hover:bg-neutral-500/20;
-  }
-  .linkActive {
-    @apply bg-stone-800 py-[6px] px-4 rounded-full text-white text-sm font-bold hover:bg-neutral-100 cursor-pointer dark:text-neutral-300 dark:hover:text-white dark:bg-transparent dark:hover:hover:bg-neutral-500/20;
-  }
+   .link {
+      @apply bg-white py-[6px] px-4 rounded-full text-stone-800 text-sm font-bold hover:bg-neutral-100 cursor-pointer dark:text-neutral-300 dark:hover:text-white dark:bg-transparent dark:hover:bg-neutral-500/20;
+   }
+   .linkActive {
+      @apply bg-stone-800 hover:bg-stone-900 py-[6px] px-4 rounded-full text-white text-sm font-bold cursor-pointer dark:text-neutral-300 dark:bg-transparent dark:bg-gradient-to-tl from-transparent to-white/30 from-[100%] to-[70%] dark:border dark:border-stone-300 dark:text-white;
+   }
 }
 
 /* hover:drop-shadow-md hover:scale-[1.1] hover:z-50 transition duration-300 ease-in-out */

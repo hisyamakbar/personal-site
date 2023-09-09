@@ -95,3 +95,60 @@ toggleBtn.addEventListener("click", () => {
       carretTypedJs.style.color = "#0a0a0a"
    }
 });
+
+// playing with navbar
+const itemNav = document.querySelectorAll('header ul li')
+const cards = document.querySelectorAll('main .card')
+
+
+itemNav.forEach(item => {
+   item.addEventListener(('click'), () => {
+      const navActive = document.querySelector('.linkActive');
+
+      if (navActive) {
+         navActive.classList.remove('linkActive');
+      }
+
+      // Menambahkan kelas 'linkActive' pada elemen yang diklik jika tidak ada
+      if (!item.classList.contains('linkActive')) {
+         item.classList.add('linkActive');
+      }
+
+      cards.forEach(card => {
+         card.classList.add('blur-sm');
+         if (item.textContent.includes('All')) {
+            card.classList.toggle('blur-sm')
+         }
+      });
+
+      if (item.textContent.includes('About')) {
+         const busyElement = document.getElementById('busy');
+         const twitter = document.getElementById('twitter');
+
+         if (busyElement) {
+            busyElement.classList.toggle('blur-sm');
+         }
+         if (twitter) {
+            twitter.classList.toggle('blur-sm');
+         }
+      }
+
+      if (item.textContent.includes('Projects')) {
+         const projectsElement = document.getElementById('projects');
+         if (projectsElement) {
+            projectsElement.classList.toggle('blur-sm');
+         }
+      }
+
+      if (item.textContent.includes('Other')) {
+         const other2Element = document.getElementById('queue');
+         const otherElement = document.getElementById('other');
+         if (otherElement) {
+            otherElement.classList.toggle('blur-sm');
+         }
+         if (other2Element) {
+            other2Element.classList.toggle('blur-sm');
+         }
+      }
+   })
+});
