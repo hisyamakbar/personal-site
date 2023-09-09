@@ -4,17 +4,29 @@ import confetti from 'canvas-confetti';
 
 new Typed('#element', {
    strings: ["Busy coding!",
-      "Learning mode: engaged.",
-      "Code mode: focused.",
-      "Learning mode: immersed.",
-      "Dev mode: in progress.",
-      "Coding marathon: intense.",
-      "Immersed in coding."
+      "Code: focused",
+      "Learning: immersed",
+      "Dev: in progress",
+      "Coding: intense",
+      "Development: deep dive",
+      "Immersed: coding"
    ],
    typeSpeed: 50,
    backDelay: 75,
    loop: true,
 });
+
+// navbar shadow
+window.addEventListener('scroll', () => {
+   const navbar = document.getElementById('navbar')
+   if (window.pageYOffset > 0) {
+      navbar.classList.add('shadow-sm')
+      navbar.classList.add('dark:shadow-sm')
+   } else {
+      navbar.classList.remove('shadow-sm')
+      navbar.classList.remove('dark:shadow-sm')
+   }
+})
 
 // confetti
 const input = document.getElementById('queue')
@@ -29,9 +41,6 @@ const action = () => {
    const inputValue = input.value.trim();
 
    if (inputValue.length >= 10 && inputValue.includes('@')) {
-
-
-
       const myCanvas = document.createElement('canvas');
       document.body.appendChild(myCanvas);
 
@@ -97,7 +106,7 @@ toggleBtn.addEventListener("click", () => {
 });
 
 // playing with navbar
-const itemNav = document.querySelectorAll('header ul li')
+const itemNav = document.querySelectorAll('header div a')
 const cards = document.querySelectorAll('main .card')
 
 itemNav.forEach(item => {
@@ -139,7 +148,7 @@ itemNav.forEach(item => {
       }
 
       if (item.textContent.includes('Other')) {
-         const other2Element = document.getElementById('queue');
+         const other2Element = document.getElementById('queueContainer');
          const otherElement = document.getElementById('other');
          if (otherElement) {
             otherElement.classList.toggle('blur-sm');

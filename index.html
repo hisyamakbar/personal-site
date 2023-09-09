@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,14 +10,18 @@
       <link rel="stylesheet" href="src/css/typedJS.css" />
    </head>
    <body class="bg-stone-100 dark:bg-neutral-700 flex flex-col justify-between desktop:h-screen">
-      <header class="flex flex-col justify-between items-center py-4 gap-6 desktop:h-32 tablet:flex-row tablet:px-[3.5vw]">
+      <!-- Navbar -->
+      <header
+         id="navbar"
+         class="flex flex-col justify-between items-center py-4 gap-6 sticky top-0 left-0 z-20 tablet:static bg-stone-100 dark:bg-neutral-700 dark:shadow-sm tablet:dark:shadow-none tablet:shadow-none desktop:h-32 tablet:flex-row tablet:px-[3.5vw]"
+      >
          <a href="#" class="font-['Cabinet_Grotesk'] text-xl font-extrabold bg-gradient-to-tl from-violet-600 to-indigo-300 bg-clip-text text-transparent">Hisyam</a>
-         <ul class="p-[5px] bg-white rounded-full flex dark:backdrop-blur-2xl dark:bg-transparent dark:bg-gradient-to-tl from-transparent to-white/30 from-[0%] to-[1000%] dark:border dark:border-stone-300;">
-            <li class="link linkActive">All</li>
-            <li class="link">About</li>
-            <li class="link">Projects</li>
-            <li class="link">Others</li>
-         </ul>
+         <div class="p-[5px] bg-white rounded-full flex dark:backdrop-blur-2xl dark:bg-transparent dark:bg-gradient-to-tl from-transparent to-white/30 from-[0%] to-[1000%] dark:border dark:border-stone-300;">
+            <a href="#" class="link linkActive">All</a>
+            <a href="#busy" class="link">About</a>
+            <a href="#projects" class="link">Projects</a>
+            <a href="#other" class="link">Others</a>
+         </div>
          <a href="#" class="font-bold text-neutral-950 hover:text-neutral-400 dark:text-neutral-300 dark:hover:text-white hidden tablet:block desktop:block">Contact</a>
       </header>
 
@@ -68,7 +72,7 @@
          </div>
 
          <!-- furnistar -->
-         <div id="projects" class="card relative overflow-hidden min-h-[646px] row-span-2 col-span-3 order-2 tablet:col-span-2 desktop:col-span-1 desktop:min-h-[283px] group">
+         <div id="projects" class="card relative overflow-hidden min-h-[646px] row-span-2 col-span-3 order-3 tablet:col-span-2 desktop:col-span-1 desktop:min-h-[283px] group">
             <a
                href="https://7n4hjf.csb.app/?#"
                target="_blank"
@@ -109,7 +113,7 @@
          </div>
 
          <!-- queue -->
-         <div id="queue" class="card flex flex-col gap-3 p-[31px] min-h-[323px] col-span-3 order-4 justify-center desktop:min-h-[283px] desktop:col-span-2">
+         <div id="queueContainer" class="card flex flex-col gap-3 p-[31px] min-h-[323px] col-span-3 order-4 justify-center desktop:min-h-[283px] desktop:col-span-2">
             <h3 class="text-neutral-950 font-black text-2xl dark:text-white tracking-wide">Still pushing for collaboration?</h3>
             <p class="text-body-costum text-neutral-700 dark:text-neutral-300">Sure, if you're still interested in collaborating with me, you can fill out the email form, and you'll receive a queue number.</p>
             <input id="queue" type="email" placeholder="xxxx@yourmail.com" class="inline-block w-full mb-3 dark:text-white" />
@@ -136,7 +140,7 @@
       <footer class="w-full py-4">
          <p class="text-center dark:text-neutral-300">build with ❤️‍🔥 Love. design inspired by <a href="https://nevflynn.com/" target="_blank" class="font-semibold">nevflynn</a></p>
       </footer>
-      <div class="hidden blur-sm"></div>
+      <div class="hidden blur-sm shadow-sm"></div>
 
       <script type="module" src="./src/js/main.js"></script>
    </body>
