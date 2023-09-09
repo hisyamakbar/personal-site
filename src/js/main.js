@@ -100,7 +100,6 @@ toggleBtn.addEventListener("click", () => {
 const itemNav = document.querySelectorAll('header ul li')
 const cards = document.querySelectorAll('main .card')
 
-
 itemNav.forEach(item => {
    item.addEventListener(('click'), () => {
       const navActive = document.querySelector('.linkActive');
@@ -109,7 +108,6 @@ itemNav.forEach(item => {
          navActive.classList.remove('linkActive');
       }
 
-      // Menambahkan kelas 'linkActive' pada elemen yang diklik jika tidak ada
       if (!item.classList.contains('linkActive')) {
          item.classList.add('linkActive');
       }
