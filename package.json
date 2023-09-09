@@ -1,0 +1,20 @@
+{
+  "name": "portofolio-page",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"npx tailwindcss -i ./src/css/globalMain.css -o ./src/css/main.css --watch\"",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.6.0",
+    "concurrently": "^8.2.1",
+    "typed.js": "^2.0.16"
+  }
+}

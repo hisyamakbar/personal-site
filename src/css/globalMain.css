@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      font-family: "Cabinet Grotesk", sans-serif;
+   }
+   body {
+      font-family: "Satoshi", sans-serif;
+   }
+
+   input {
+      @apply bg-transparent border-neutral-400 h-[51px] pl-1 border-b focus:outline-none;
+   }
+}
+
+@layer components {
+   .card {
+      @apply bg-white  rounded-3xl p-10 drop-shadow-sm hover:drop-shadow-lg dark:drop-shadow-none transition duration-150 ease-out hover:ease-in hover:scale-[1.03]
+
+      /* dark mode */
+      dark:backdrop-blur-2xl
+      dark:bg-transparent
+      dark:bg-gradient-to-tl from-transparent to-white/30 from-[0%] to-[200%]
+      dark:border
+      dark:border-stone-300;
+   }
+}
+
+/* hover:drop-shadow-md hover:scale-[1.1] hover:z-50 transition duration-300 ease-in-out */
